@@ -53,11 +53,9 @@ def main():
             concatenateInbetween()
     
     if mode == '2':
-
         remove()
 
     if mode == '3':
-
         replace()
     
     
