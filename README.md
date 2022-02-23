@@ -4,6 +4,9 @@ Python file editing tool to automate replacing, concatenating or removing all in
 ## Installation
 `git clone https://github.com/RohanSenthil/SwiftEdit.py.git`
 
+## Prerequisites
+Install the latest version of python for your operating system at https://www.python.org/
+
 ## Usage
 `cd SwiftEdit.py`   
 `python3 SwiftEdit.py`   
