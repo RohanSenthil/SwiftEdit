@@ -32,7 +32,6 @@ def main():
         print("1. Concatenate at start of...")
         print("2. Concatenate at end of...")
         print("3. Concatenate inbetween...")
-
         print("")
 
         while(True):
@@ -75,7 +74,7 @@ def replace():
                 file = file.read()
             break
         except:
-            print("Error: File does not exist")
+            print("Error: File cannot be found")
             print("")
 
     stringToRemove = input("String to replace: ")
@@ -122,7 +121,7 @@ def remove():
                 file = file.read()
             break
         except:
-            print("Error: File does not exist")
+            print("Error: File cannot be found")
             print("")
 
     stringToRemove = input("String to remove: ")
@@ -160,7 +159,7 @@ def concatenateStart():
                 file = file.read()
             break
         except:
-            print("Error: File does not exist")
+            print("Error: File cannot be found")
             print("")
 
     stringToAdd = input("String to concatenate: ")
@@ -198,7 +197,7 @@ def concatenateEnd():
                 file = inputFile.read()
             break
         except:
-            print("Error: File does not exist")
+            print("Error: File cannot be found")
             print("")
         
 
@@ -237,7 +236,7 @@ def concatenateInbetween():
                 file = inputFile.read()
             break
         except:
-            print("Error: File does not exist")
+            print("Error: File cannot be found")
             print("")
         
 
