@@ -1,4 +1,7 @@
 import re
+import os
+
+ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
 
 def main():
 
@@ -65,10 +68,10 @@ def replace():
 
     while(True):
 
-        inputFile = input("Input File: ")
+        inputFile = input("File to Edit: ")
 
         try:
-            with open(inputFile, "r") as file:
+            with open(os.path.join(ROOT_DIR, inputFile), "r") as file:
                 file = file.read()
             break
         except:
@@ -99,7 +102,7 @@ def replace():
             file = file[:idx[i]] + newString + file[idx[i]+len(stringToRemove):]
             
 
-    with open(outFile, "a") as newFile:
+    with open(os.path.join(ROOT_DIR, outFile), "a") as newFile:
         newFile.write(file)
 
     print("SUCCESS!")
@@ -112,10 +115,10 @@ def remove():
 
     while(True):
 
-        inputFile = input("Input File: ")
+        inputFile = input("File to Edit: ")
 
         try:
-            with open(inputFile, "r") as file:
+            with open(os.path.join(ROOT_DIR, inputFile), "r") as file:
                 file = file.read()
             break
         except:
@@ -137,7 +140,7 @@ def remove():
         indexToRemove = i*len(stringToRemove)
         file = file[:(idx[i]-indexToRemove)] + file[(idx[i]-indexToRemove)+len(stringToRemove):]
 
-    with open(outFile, "a") as newFile:
+    with open(os.path.join(ROOT_DIR, outFile), "a") as newFile:
         newFile.write(file)
 
     print("SUCCESS!")
@@ -150,10 +153,10 @@ def concatenateStart():
 
     while(True):
 
-        inputFile = input("Input File: ")
+        inputFile = input("File to Edit: ")
 
         try:
-            with open(inputFile, "r") as file:
+            with open(os.path.join(ROOT_DIR, inputFile), "r") as file:
                 file = file.read()
             break
         except:
@@ -176,7 +179,7 @@ def concatenateStart():
         indexToAdd = i*len(stringToAdd)
         file = file[:(idx[i]+indexToAdd)] + stringToAdd + file[(idx[i]+indexToAdd):]
 
-    with open(outFile, "a") as newFile:
+    with open(os.path.join(ROOT_DIR, outFile), "a") as newFile:
         newFile.write(file)
 
     print("SUCCESS!")
@@ -188,10 +191,10 @@ def concatenateEnd():
 
     while(True):
 
-        inputFile = input("Input File: ")
+        inputFile = input("File to Edit: ")
 
         try:
-            with open(inputFile, "r") as inputFile:
+            with open(os.path.join(ROOT_DIR, inputFile), "r") as file:
                 file = inputFile.read()
             break
         except:
@@ -215,7 +218,7 @@ def concatenateEnd():
         indexToAdd = i*len(stringToAdd)
         file = file[:(idx[i]+indexToAdd)] + stringToAdd + file[(idx[i]+indexToAdd):]
 
-    with open(outFile, "a") as newFile:
+    with open(os.path.join(ROOT_DIR, outFile), "a") as newFile:
         newFile.write(file)
     
     print("SUCCESS!")
@@ -227,10 +230,10 @@ def concatenateInbetween():
 
     while(True):
 
-        inputFile = input("Input File: ")
+        inputFile = input("File to Edit: ")
 
         try:
-            with open(inputFile, "r") as inputFile:
+            with open(os.path.join(ROOT_DIR, inputFile), "r") as file:
                 file = inputFile.read()
             break
         except:
@@ -259,7 +262,7 @@ def concatenateInbetween():
         indexToAdd = i*len(stringToAdd)
         file = file[:(idx[i]+indexToAdd)] + stringToAdd + file[(idx[i]+indexToAdd):]
 
-    with open(outFile, "a") as newFile:
+    with open(os.path.join(ROOT_DIR, outFile), "a") as newFile:
         newFile.write(file)
 
     print("SUCCESS!")
