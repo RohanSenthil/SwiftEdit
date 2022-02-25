@@ -195,7 +195,7 @@ def concatenateEnd():
 
         try:
             with open(os.path.join(ROOT_DIR, inputFile), "r") as file:
-                file = inputFile.read()
+                file = file.read()
             break
         except:
             print("Error: File cannot be found")
@@ -234,7 +234,7 @@ def concatenateInbetween():
 
         try:
             with open(os.path.join(ROOT_DIR, inputFile), "r") as file:
-                file = inputFile.read()
+                file = file.read()
             break
         except:
             print("Error: File cannot be found")
