@@ -102,7 +102,7 @@ def replace():
             file = file[:idx[i]] + newString + file[idx[i]+len(stringToRemove):]
             
 
-    with open(os.path.join(ROOT_DIR, outFile), "a") as newFile:
+    with open(os.path.join(ROOT_DIR, outFile), "w") as newFile:
         newFile.write(file)
 
     print("SUCCESS!")
@@ -140,7 +140,7 @@ def remove():
         indexToRemove = i*len(stringToRemove)
         file = file[:(idx[i]-indexToRemove)] + file[(idx[i]-indexToRemove)+len(stringToRemove):]
 
-    with open(os.path.join(ROOT_DIR, outFile), "a") as newFile:
+    with open(os.path.join(ROOT_DIR, outFile), "w") as newFile:
         newFile.write(file)
 
     print("SUCCESS!")
@@ -179,7 +179,7 @@ def concatenateStart():
         indexToAdd = i*len(stringToAdd)
         file = file[:(idx[i]+indexToAdd)] + stringToAdd + file[(idx[i]+indexToAdd):]
 
-    with open(os.path.join(ROOT_DIR, outFile), "a") as newFile:
+    with open(os.path.join(ROOT_DIR, outFile), "w") as newFile:
         newFile.write(file)
 
     print("SUCCESS!")
@@ -218,7 +218,7 @@ def concatenateEnd():
         indexToAdd = i*len(stringToAdd)
         file = file[:(idx[i]+indexToAdd)] + stringToAdd + file[(idx[i]+indexToAdd):]
 
-    with open(os.path.join(ROOT_DIR, outFile), "a") as newFile:
+    with open(os.path.join(ROOT_DIR, outFile), "w") as newFile:
         newFile.write(file)
     
     print("SUCCESS!")
@@ -262,7 +262,7 @@ def concatenateInbetween():
         indexToAdd = i*len(stringToAdd)
         file = file[:(idx[i]+indexToAdd)] + stringToAdd + file[(idx[i]+indexToAdd):]
 
-    with open(os.path.join(ROOT_DIR, outFile), "a") as newFile:
+    with open(os.path.join(ROOT_DIR, outFile), "w") as newFile:
         newFile.write(file)
 
     print("SUCCESS!")
